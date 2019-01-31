@@ -1,1 +1,3 @@
-# emacs_config
+# Emacs config
+
+basic config for beginers
