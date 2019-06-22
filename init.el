@@ -63,3 +63,16 @@
 (require 'company-jedi)
 (add-to-list 'company-backends 'company-jedi)
 (add-hook 'python-mode-hook 'global-flycheck-mode)
+
+
+;;--------------------- DIRECTORY TREE -----------------------
+(require 'neotree)
+(global-set-key (kbd "M-d") 'neotree-toggle)
+
+
+;;-------------------- SHELL SCRIPT MODE ---------------------
+(add-hook 'shell-mode-hook (lambda () (company-mode -1)) 'append)
+
+(add-hook 'prog-mode-hook #'hs-minor-mode)
+(global-set-key (kbd "M-<right>") 'hs-show-block)
+(global-set-key (kbd "M-<left>") 'hs-hide-block)
